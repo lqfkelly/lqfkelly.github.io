@@ -55,7 +55,7 @@
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">lqfkelly</h5>
-          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">609810063@qq.com</a>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
         </hgroup>
       </div>
     </div>
@@ -77,34 +77,39 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/"  >
+              <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
                 Tags
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/"  >
+              <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
                 Categories
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://github.com" target="_blank" >
+              <a href="https://github.com/yscoder" target="_blank" >
                 <i class="icon icon-lg icon-github"></i>
                 Github
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="http://www.weibo.com" target="_blank" >
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
                 <i class="icon icon-lg icon-weibo"></i>
                 Weibo
               </a>
             </li>
         
-          
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
         
       </ul>
     </div>
@@ -183,8 +188,9 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        我的第一篇博客这是我第一次使用博客，后续会记录一些工作中用到的技术知识以及学习笔记。
-视频
+        我的第一篇博客这是我第一次使用自己的博客，后续会记录一些工作中用到的技术知识以及学习笔记。
+Hexo搭建博客步骤具体可以参考文档 
+1、安装node、git2、通过node安装hexo  npm install -g hexo-cli3、新建空文件myblog  进入目录，通过git bash 窗口，执行hexo init4、安装相关依赖 npm install5、新建一篇博客 hexo n...
     
 
         <a href="/2020/01/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="post-more waves-effect waves-button">
@@ -272,6 +278,11 @@
  </div>
 
 
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://lqfkelly.github.io/" alt="微信分享二维码">
+</div>
 
 
 
@@ -315,7 +326,20 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 
 <script>
-
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
 </script>
 
 
