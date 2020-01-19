@@ -55,7 +55,7 @@
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">lqfkelly</h5>
-          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">609810063@qq.com</a>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
         </hgroup>
       </div>
     </div>
@@ -77,33 +77,39 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/"  >
+              <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
                 Tags
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/"  >
+              <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
                 Categories
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://github.com" target="_blank" >
+              <a href="https://github.com/yscoder" target="_blank" >
                 <i class="icon icon-lg icon-github"></i>
                 Github
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="http://www.weibo.com" target="_blank" >
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
                 <i class="icon icon-lg icon-weibo"></i>
                 Weibo
               </a>
             </li>
         
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
         
       </ul>
     </div>
@@ -156,6 +162,46 @@
     <ul class="post-list">
     
         <li class="post-list-item fade">
+            <article id="“w-spring-boot学习"
+  class="article-card article-type-“w" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-01-19 18:19:15" datetime="2020-01-19T10:19:15.000Z"  itemprop="datePublished">2020-01-19</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/01/19/spring-boot%E5%AD%A6%E4%B9%A0/">spring boot学习</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        spring boot学习spring boot由来传统的EJB标准配置繁多，过于臃肿。需要web容器调用EJB容器的方式，造成性能不佳。基于此出现了spring框架，具有很多优点：1、IOC，降低资源耦合，侵入性降低。2、AOP，通过配置可以减少重复性代码，能够更加专注于业务代码开发。整合了其他流行的框架，简化了主流技术的使用。
+在spring的基础上，通过注解方式简化了spring框架的...
+    
+
+        <a href="/2020/01/19/spring-boot%E5%AD%A6%E4%B9%A0/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
             <article id="post-我的第一篇博客"
   class="article-card article-type-post" itemprop="blogPost">
 
@@ -187,7 +233,9 @@ Hexo搭建博客步骤具体可以参考文档
 1、安装node、git2、通过node安装hexo  npm install -g hexo-cli3、新建空文件myblog  进入目录，通过git bash 窗口，执行hexo init4、安装相关依赖 npm install5、新建一篇博客 hexo n...
     
 
-  
+        <a href="/2020/01/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="post-more waves-effect waves-button">
+            Continue reading...
+        </a>
     </div>
     
 </article>
@@ -270,6 +318,12 @@ Hexo搭建博客步骤具体可以参考文档
  </div>
 
 
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://lqfkelly.github.io/" alt="微信分享二维码">
+</div>
+
 
 
 
@@ -312,7 +366,20 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 
 <script>
-
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
 </script>
 
 
